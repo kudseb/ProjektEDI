@@ -39,7 +39,42 @@ header {
 }
 
 /*Navbar scroll effect*/
+@media (min-width: 991px) {
+    nav {
+        transition: all 0.4s ease;
+        height: 80px;
+    }
+}
 
+nav.sticky {
+    height: 55px;
+}
+
+/*Main links*/
+.main-nav-link a {
+    font-size: 15px;
+    color: #000;
+}
+
+/*Main links hover effect*/
+@media (min-width: 991px) {
+    .main-nav-link::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #322893;
+        transition: width .3s;
+    }
+
+    .main-nav-link:hover::after {
+        width: 100%;
+    }
+
+    .link-arrow {
+        display: none;
+    }
+}
 
 /*Social links*/
 .social-link {
