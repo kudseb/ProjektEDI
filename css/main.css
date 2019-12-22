@@ -93,6 +93,20 @@ nav.sticky {
 .yt-icon {
     color: #c4302b;
 }
+.fb-icon:hover {
+    color: #2a4887;
+}
+
+
+.inst-icon:hover {
+    color: #bc375a;
+}
+
+.yt-icon:hover {
+    color: #b3201a;
+}
+
+
 
 
 /*Logo*/
