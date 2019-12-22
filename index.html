@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap&subset=latin-ext" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- Own style -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Script -->
+    <script defer src="js/skycons.js"></script>
+    <script defer src="js/navbar.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar bg-white navbar-expand-lg px-md-4 px-xl-5">
+            <a class="navbar-brand navbar logo" href="#"><img class="d-inline-block navbar-logo-img" src="img/logo.png" alt="Weather Logo"> Weather</a>
+
+            <button class="navbar-toggler navbar-light" data-toggle="collapse" data-target="#main-menu" type="button" aria-controls="main-menu" aria-expanded="false" aria-label="Przycisk do menu"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse ml-3 ml-lg-0" id="main-menu">
+                <ul class="navbar-nav mr-auto ">
+                    <li class="nav-item px-lg-2 px-xl-3 py-2 py-lg-0 mt-3 mt-lg-0 main-nav-link main-nav-link-first">
+                        <a class="nav-link" href="#"><i class="fas fa-caret-right link-arrow"></i>Strona główna</a>
+                    </li>
+                    <li class="nav-item px-lg-2 px-xl-3 py-2 py-lg-0 main-nav-link">
+                        <a class="nav-link" href="#"><i class="fas fa-caret-right link-arrow"></i>Pogoda</a>
+                    </li>
+                    <li class="nav-item px-lg-2 px-xl-3 py-2 py-lg-0 main-nav-link">
+                        <a class="nav-link" href="#"><i class="fas fa-caret-right link-arrow"></i>Zanieczyszczenia powietrza</a>
+                    </li>
+                    <li class="nav-item px-lg-2 px-xl-3 py-2 py-lg-0 main-nav-link">
+                        <a class="nav-link" href="#"><i class="fas fa-caret-right link-arrow"></i>Kontakt</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav second-ul">
+                    <li class="nav-item mx-lg-2 mx-xl-3">
+                        <a class="nav-link social-link" href="#"><i class="fab fa-facebook-square fb-icon"></i></a>
+                    </li>
+                    <li class="nav-item mx-lg-2 mx-xl-3">
+                        <a class="nav-link social-link" href="#"><i class="fab fa-instagram inst-icon"></i></a>
+                    </li>
+                    <li class="nav-item mx-lg-2 mx-xl-3">
+                        <a class="nav-link social-link" href="#"><i class="fab fa-youtube nav-youtube-icon yt-icon"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!--**** WEATHER SECTION ****-->
+        <section>
+            <div class="container-fluid weather-section px-5 pt-5">
+                <div class="row px-4">
+                    <div class="col-4">
+                        <h2 class="city-title">Kraków</h2>
+                        <div class="d-flex small-info">
+                            <p class="pr-4">Środa 04.12</p>
+                            <i class="ownicon-sunset"></i>
+                            <p class="ml-1 pr-4 sun-rise-set">7:23 - 15:34</p>
+                            <i class="ownicon-pressure"></i>
+                            <p class="ml-1 pr-4 pressure">1000 hpa</p>
+                        </div>
+                        <div class="d-flex pt-4">
+                            <p class="mt-4 mr-2"><i class="fas fa-cloud-moon-rain main-info-icon"></i></p>
+                            <p class="ml-2 ml-xl-4 main-info-temperature">2</p>
+                            <p class="pr-2 pr-xl-3 main-info-degrees">°C</p>
+                            <div class="text-center">
+                                <i class="fas fa-wind second-info-icon"></i>
+                                <p class="px-2 px-xl-3 mb-0 main-info wind-speed">5</p>
+                                <p class="main-info-units">km/h</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-tint second-info-icon"></i>
+                                <p class="px-2 px-xl-3 mb-0 main-info humidity">3</p>
+                                <p class="main-info-units">%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 text-center pt-5">
+                        <h4 class="h5 font-weight-light">Jutro</h4>
+                        <i class="fas fa-sun next-day-icon pt-3 pb-4"></i>
+                        <p class="h4 tomorrow-temperature">5<span class="h6 ml-1">°C</span></p>
+                    </div>
+                    <div class="col-2 text-center pt-5">
+                        <h4 class="h5 font-weight-light">Pojutrze</h4>
+                        <i class="fas fa-sun next-day-icon pt-3 pb-4"></i>
+                        <p class="h4 after-tomorrow-temperature">3<span class="h6 ml-1">°C</span></p>
+                    </div>
+                    <div class="col-4 pt-3 pl-5">
+                        <h3>Sprawdź pogodę</h3>
+                        <input class="container-fluid mt-1 location-input" placeholder="Wpisz swoją miejscowość">
+                        <ul class="cities-list d-flex mt-3">
+                            <div class="ml-4">
+                                <li>Warszawa</li>
+                                <li>Łódź</li>
+                                <li>Kraków</li>
+                                <li>Poznań</li>
+                                <li>Wrocław</li>
+                            </div>
+                            <div class="ml-5">
+                                <li>Szczecin</li>
+                                <li>Gdańsk</li>
+                                <li>Bydgoszcz</li>
+                                <li>Lublin</li>
+                                <li>Rzeszów</li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--**** BLOG SECTION ****-->
+    </main>
+</body>
+
+</html>

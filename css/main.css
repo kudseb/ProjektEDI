@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/******** NAVIGATION ********/
+header {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+}
+
+@media only screen and (max-width: 991px) {
+    .main-nav-link-first {
+        border-top: 1px solid #AEB0BF;
+    }
+
+    ul.second-ul {
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+    }
+
+    ul.second-ul li {
+        padding-right: 30px;
+    }
+
+    .link-arrow {
+        padding-right: 10px;
+    }
+
+}
+
+/*Navbar scroll effect*/
+
+
+/*Social links*/
+.social-link {
+    font-size: 30px;
+}
+
+.fb-icon {
+    color: #3b5998;
+}
+
+.inst-icon {
+    color: #cd486b;
+}
+
+
+.yt-icon {
+    color: #c4302b;
+}
+
+
+/*Logo*/
+a.logo {
+    color: #322893;
+}
+
+.navbar-logo-img {
+    width: 50px;
+    height: 50px;
+}
+
+/******** NAVIGATION END ********/
+
+
+/******** MAIN ********/
+/******** WEATHER SECTION START********/
+.weather-section {
+    background: url("../img/bg.jpg") no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    height: 440px;
+    color: #fff;
+}
+
+h2.city-title {
+    font-size: 40px;
+}
+
+.main-info-icon {
+    font-size: 110px;
+}
+
+.location-input {
+    height: 50px;
+    font-size: 15px;
+}
+
+@media (max-width: 1100px) {
+    .main-info-icon {
+        font-size: 80px;
+    }
+}
+
+.small-info {
+    color: #AEB0BF;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.next-day-icon {
+    font-size: 60px;
+}
+
+.cities-list {
+    list-style: circle;
+}
+
+.main-info-temperature {
+    font-size: 60px;
+}
+
+.main-info-degrees {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+.second-info-icon {
+    font-size: 14px;
+}
+
+.main-info {
+    font-size: 25px;
+}
+
+.main-info-units {
+    font-size: 12px;
+    color: #AEB0BF;
+}
+
+.ownicon-sunset {
+    background: url("../ownicons/sunset.svg") no-repeat;
+    height: 21px;
+    width: 21px;
+    margin-top: 1px;
+}
+
+.ownicon-pressure {
+    background: url("../ownicons/gauge.svg") no-repeat;
+    height: 15px;
+    width: 15px;
+    margin-top: 4px;
+}
+
+
+/******** WEATHER SECTION END ********/
