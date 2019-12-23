@@ -93,6 +93,7 @@ nav.sticky {
 .yt-icon {
     color: #c4302b;
 }
+
 .fb-icon:hover {
     color: #2a4887;
 }
@@ -205,3 +206,167 @@ h2.city-title {
 
 
 /******** WEATHER SECTION END ********/
+
+/******** BLOG SECTION ********/
+section.blog {
+    background: #e8e6e6;
+    padding: 60px 60px;
+}
+
+section.blog a {
+    text-decoration: none;
+}
+
+section.blog a:hover .article-img img {
+    transform: scale(1.1);
+}
+
+section.blog a:hover .blog-article {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .45);
+
+}
+
+/** Blog Article **/
+article.blog-article {
+    background: #fff;
+    color: #000;
+    border-radius: 15px;
+    transition: ease-in 0.15s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+}
+
+.article-img {
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.article-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+    transition: ease-in 0.2s;
+}
+
+.article-desc {
+    padding: 20px 30px;
+}
+
+h5.article-category {
+    color: #2048ea;
+}
+
+h2.article-title {
+    font-weight: 600;
+    padding: 7px 0;
+    line-height: 150%;
+}
+
+p.article-description {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 180%;
+    color: #5e5d5d;
+}
+
+p.article-date {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+@media (min-width: 1200px) {
+    h2.article-title {
+        font-size: 25px;
+    }
+
+    h5.article-category {
+        font-size: 17px;
+    }
+}
+
+
+@media(max-width: 1199px) {
+    h2.article-title {
+        font-size: 22px !important;
+    }
+
+    h5.article-category {
+        font-size: 16px !important;
+    }
+}
+
+@media(max-width: 1050px) {
+    h2.article-title {
+        font-size: 20px !important;
+    }
+
+    h5.article-category {
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    h2.article-title {
+        font-size: 25px !important;
+    }
+
+    h5.article-category {
+        font-size: 17px !important;
+    }
+
+    p.article-description {
+        font-size: 18px;
+    }
+
+    p.article-date {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+}
+
+
+
+/** Aside Article **/
+article.aside {
+    margin-top: 30px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 30px;
+    color: #000;
+}
+
+article.aside:first-child {
+    margin-top: 0;
+}
+
+article.air-polution {
+    background: #3a78ff;
+}
+
+article.rain-radar {
+    background: #9600ed;
+}
+
+.aside-icon {
+    font-size: 60px;
+}
+
+
+
+@media (min-width: 1085px) {
+    h2.aside-title {
+        font-size: 30px;
+        padding: 10px 0;
+    }
+
+}
+
+@media (max-width: 1084px) {
+    h2.aside-title {
+        font-size: 26px;
+        padding: 10px 0;
+    }
+}
+
+p.aside-description {
+    font-size: 16px;
+}
