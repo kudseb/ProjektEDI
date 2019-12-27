@@ -370,3 +370,49 @@ article.rain-radar {
 p.aside-description {
     font-size: 16px;
 }
+
+/******** FOOTER ********/
+.footer {
+    background: #000;
+}
+
+.footer-logo {
+    font-size: 25px;
+    color: #fff;
+}
+
+.footer-logo-img {
+    width: 80px;
+    height: auto;
+}
+
+.footer h4 {
+    color: #7d8081;
+    padding-bottom: 10px;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    padding: 4px 0;
+    font-weight: 300;
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer ul li a {
+    color: #fff;
+}
+
+.footer p {
+    font-size: 13px;
+    color: #7d8081;
+}
+
+@media (max-width: 1170px) {
+    .footer ul li {
+        font-size: 14px;
+    }
+}
