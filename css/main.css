@@ -148,23 +148,56 @@ h2.city-title {
 
 @media (max-width: 1100px) {
     .main-info-icon {
-        font-size: 80px;
+        height: 80px;
     }
 }
 
 .small-info {
-    color: #AEB0BF;
+    color: #aeb0bf;
     font-weight: 300;
     font-size: 15px;
     letter-spacing: 1px;
 }
 
 .next-day-icon {
-    font-size: 60px;
+    height: 110px;
+}
+
+@media (max-width: 1300px) {
+    .next-day-icon {
+        height: 90px;
+    }
 }
 
 .cities-list {
     list-style: circle;
+    column-count: 2;
+}
+
+@media (min-width: 576px) {
+    .cities-list {
+        column-count: 5;
+    }
+}
+
+@media (min-width: 992px) {
+    .cities-list {
+        column-count: 2;
+    }
+}
+
+ul.cities-list li {
+    padding: 5px 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checked-li {
+    list-style: disc;
+}
+
+ul.cities-list li:hover {
+    list-style: disc;
 }
 
 .main-info-temperature {
@@ -176,7 +209,6 @@ h2.city-title {
     margin-top: 10px;
 }
 
-
 .second-info-icon {
     font-size: 14px;
 }
@@ -187,7 +219,7 @@ h2.city-title {
 
 .main-info-units {
     font-size: 12px;
-    color: #AEB0BF;
+    color: #aeb0bf;
 }
 
 .ownicon-sunset {
@@ -203,7 +235,6 @@ h2.city-title {
     width: 15px;
     margin-top: 4px;
 }
-
 
 /******** WEATHER SECTION END ********/
 
