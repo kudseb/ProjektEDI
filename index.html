@@ -27,9 +27,9 @@
     <link rel="stylesheet" href="css/main.css">
 
     <!-- Script -->
-    <!---->
     <script defer src="js/skycons.js"></script>
     <script defer src="js/navbar.js"></script>
+	<script defer src="js/weather.js"></script>
 </head>
 
 <body>
@@ -71,61 +71,64 @@
     <main>
         <!--**** WEATHER SECTION ****-->
         <section>
-            <div class="container-fluid weather-section px-5 pt-5">
-                <div class="row px-4">
-                    <div class="col-4">
+            <div class="container-fluid px-5 pt-5 weather-section">
+                <div class="row px-md-4">
+                    <div class="col-12 col-sm-6 col-lg-4">
                         <h2 class="city-title">Kraków</h2>
                         <div class="d-flex small-info">
-                            <p class="pr-4">Środa 04.12</p>
+                            <p class="pr-4 current-date"></p>
                             <i class="ownicon-sunset"></i>
-                            <p class="ml-1 pr-4 sun-rise-set">7:23 - 15:34</p>
+                            <p class="ml-1 pr-4 sun-rise-set"></p>
                             <i class="ownicon-pressure"></i>
-                            <p class="ml-1 pr-4 pressure">1000 hpa</p>
+                            <p class="ml-1 pr-4 pressure"></p>
                         </div>
                         <div class="d-flex pt-4">
-                            <p class="mt-4 mr-2"><i class="fas fa-cloud-moon-rain main-info-icon"></i></p>
-                            <p class="ml-2 ml-xl-4 main-info-temperature">2</p>
-                            <p class="pr-2 pr-xl-3 main-info-degrees">°C</p>
+                            <p class="mt-4 mr-1 mr-md-2">
+                                <canvas class="main-info-icon" id="icon" width="128" height="128"></canvas>
+                            </p>
+                            <p class="ml-2 ml-xl-4 main-info-temperature"></p>
+                            <p class="pr-1 pr-xl-3 main-info-degrees">°C</p>
                             <div class="text-center">
                                 <i class="fas fa-wind second-info-icon"></i>
-                                <p class="px-2 px-xl-3 mb-0 main-info wind-speed">5</p>
+                                <p class="px-1 px-md-4 px-xl-3 mb-0 main-info wind-speed"></p>
                                 <p class="main-info-units">km/h</p>
                             </div>
                             <div class="text-center">
                                 <i class="fas fa-tint second-info-icon"></i>
-                                <p class="px-2 px-xl-3 mb-0 main-info humidity">3</p>
+                                <p class="px-2 px-xl-3 mb-0 main-info humidity"></p>
                                 <p class="main-info-units">%</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-2 text-center pt-5">
+                    <div class="col-6 pt-4 pt-md-2 col-sm-3 col-lg-2 mx-auto mx-sm-0 pt-md-5 text-center">
                         <h4 class="h5 font-weight-light">Jutro</h4>
-                        <i class="fas fa-sun next-day-icon pt-3 pb-4"></i>
-                        <p class="h4 tomorrow-temperature">5<span class="h6 ml-1">°C</span></p>
+                        <p class="pt-3 pb-2 mx-0">
+                            <canvas class="next-day-icon" id="tomorrow-icon" width="128" height="128"></canvas>
+                        </p>
+                        <p class="h4 tomorrow-temperature"></p>
                     </div>
-                    <div class="col-2 text-center pt-5">
+                    <div class="col-6 pt-4 pt-md-2 col-sm-3 col-lg-2 mx-auto mx-sm-0 pt-md-5 text-center">
                         <h4 class="h5 font-weight-light">Pojutrze</h4>
-                        <i class="fas fa-sun next-day-icon pt-3 pb-4"></i>
-                        <p class="h4 after-tomorrow-temperature">3<span class="h6 ml-1">°C</span></p>
+                        <p class="pt-3 pb-2 mx-0">
+                            <canvas class="next-day-icon" id="after-tomorrow-icon" width="128" height="128"></canvas>
+                        </p>
+                        <p class="h4 after-tomorrow-temperature"></p>
                     </div>
-                    <div class="col-4 pt-3 pl-5">
+                    <div class="col-12 mx-auto col-lg-4 pt-5 pb-4 pt-md-3 pl-md-5">
+                        <!--  pt-md-3 pl-md-5-->
                         <h3>Sprawdź pogodę</h3>
-                        <input class="container-fluid mt-1 location-input" placeholder="Wpisz swoją miejscowość">
-                        <ul class="cities-list d-flex mt-3">
-                            <div class="ml-4">
-                                <li>Warszawa</li>
-                                <li>Łódź</li>
-                                <li>Kraków</li>
-                                <li>Poznań</li>
-                                <li>Wrocław</li>
-                            </div>
-                            <div class="ml-5">
-                                <li>Szczecin</li>
-                                <li>Gdańsk</li>
-                                <li>Bydgoszcz</li>
-                                <li>Lublin</li>
-                                <li>Rzeszów</li>
-                            </div>
+                        <input class="container-fluid mt-1 location-input" placeholder="Wpisz swoją miejscowość" />
+                        <ul class="cities-list mt-3 ml-4" id="cities-list">
+                            <li>Warszawa</li>
+                            <li>Łódź</li>
+                            <li id="default-element">Kraków</li>
+                            <li>Poznań</li>
+                            <li>Wrocław</li>
+                            <li>Szczecin</li>
+                            <li>Gdańsk</li>
+                            <li>Bydgoszcz</li>
+                            <li>Lublin</li>
+                            <li>Rzeszów</li>
                         </ul>
                     </div>
                 </div>
