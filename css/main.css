@@ -358,40 +358,74 @@ p.article-date {
 
 /** Aside Article **/
 article.aside {
-  padding: 30px;
-  text-align: center;
-  border-radius: 30px;
-  color: #000;
+    padding: 30px;
+    text-align: center;
+    border-radius: 30px;
+    color: #000;
 }
 
 article.air-polution {
-  background: #3a78ff;
+    background: #3a78ff;
 }
 
 article.rain-radar {
-  background: #9600ed;
+    background: #9600ed;
 }
 
 .aside-icon {
-  font-size: 60px;
+    font-size: 60px;
 }
 
 @media (min-width: 1085px) {
-  h2.aside-title {
-    font-size: 30px;
-    padding: 10px 0;
-  }
+    h2.aside-title {
+        font-size: 30px;
+        padding: 10px 0;
+    }
 }
 
 @media (max-width: 1084px) {
-  h2.aside-title {
-    font-size: 26px;
-    padding: 10px 0;
-  }
+    h2.aside-title {
+        font-size: 26px;
+        padding: 10px 0;
+    }
 }
 
 p.aside-description {
-  font-size: 16px;
+    font-size: 16px;
+}
+
+/******** Smog classes ********/
+.very-good {
+    color: #00BB02
+}
+
+.good {
+    color: #9AE700;
+}
+
+.moderate {
+    color: #FFDE00;
+}
+
+.sufficient {
+    color: #F37C00;
+}
+
+.bad {
+    color: #FC0000;
+}
+
+.very-bad {
+    color: #AA0000;
+}
+
+.air-stats {
+    width: 100%;
+}
+
+.publication {
+    background: #fff;
+    border-radius: 15px;
 }
 
 /******** FOOTER ********/
