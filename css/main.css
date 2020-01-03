@@ -129,7 +129,7 @@ a.logo {
     background: url("../img/bg.jpg") no-repeat;
     background-position: bottom center;
     background-size: cover;
-    height: 440px;
+    min-height: 440px;
     color: #fff;
 }
 
