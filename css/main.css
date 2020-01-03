@@ -358,48 +358,40 @@ p.article-date {
 
 /** Aside Article **/
 article.aside {
-    margin-top: 30px;
-    padding: 30px;
-    text-align: center;
-    border-radius: 30px;
-    color: #000;
-}
-
-article.aside:first-child {
-    margin-top: 0;
+  padding: 30px;
+  text-align: center;
+  border-radius: 30px;
+  color: #000;
 }
 
 article.air-polution {
-    background: #3a78ff;
+  background: #3a78ff;
 }
 
 article.rain-radar {
-    background: #9600ed;
+  background: #9600ed;
 }
 
 .aside-icon {
-    font-size: 60px;
+  font-size: 60px;
 }
 
-
-
 @media (min-width: 1085px) {
-    h2.aside-title {
-        font-size: 30px;
-        padding: 10px 0;
-    }
-
+  h2.aside-title {
+    font-size: 30px;
+    padding: 10px 0;
+  }
 }
 
 @media (max-width: 1084px) {
-    h2.aside-title {
-        font-size: 26px;
-        padding: 10px 0;
-    }
+  h2.aside-title {
+    font-size: 26px;
+    padding: 10px 0;
+  }
 }
 
 p.aside-description {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 /******** FOOTER ********/

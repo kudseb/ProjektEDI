@@ -29,7 +29,7 @@
     <!-- Script -->
     <script defer src="js/skycons.js"></script>
     <script defer src="js/navbar.js"></script>
-	<script defer src="js/weather.js"></script>
+    <script defer src="js/weather.js"></script>
 </head>
 
 <body>
@@ -186,18 +186,26 @@
                             </article>
                         </a>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <article class="aside air-polution">
+                    <div class="col-md-6 col-lg-3 px-0 px-md-3 px-xl-4">
+                        <article class="aside air-polution mt-5 mt-md-3 mt-lg-0">
                             <i class="fas fa-smog aside-icon"></i>
                             <h2 class="aside-title">Jakość powietrza</h2>
-                            <p class="aside-description">Smog staje się coraz poważniejszym problemem, dlatego nie należy go bagatelizować.</p>
+                            <p class="mb-0 font-weight-bold p-air">Stacja:</p>
+                            <p class="air-pollution-station p-air"></p>
+                            <p id="air-pollution-pm10"></p>
+                            <p id="air-pollution-pm25"></p>
+                            <img class="air-stats" src="img/air-stats.png">
+                            <p class="aside-description"></p>
                         </article>
-                        <article class="aside rain-radar">
+                        <article class="aside rain-radar mt-5">
                             <i class="fas fa-umbrella aside-icon"></i>
                             <h2 class="aside-title">Radar opadów</h2>
-                            <p class="aside-description">Zobacz gdzie i z jaką siłą wystepują opady.</p>
+                            <p class="aside-description">
+                                Zobacz gdzie i z jaką siłą wystepują opady.
+                            </p>
                         </article>
                     </div>
+
                 </div>
             </div>
         </section>
