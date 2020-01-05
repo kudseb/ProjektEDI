@@ -2,53 +2,58 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Weather</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/jpg" href="img/favicon.png" />
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap&subset=latin-ext" rel="stylesheet" />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/all.min.css" />
 
     <!-- Own style -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
 
     <!-- Script -->
     <script defer src="js/skycons.js"></script>
     <script defer src="js/navbar.js"></script>
-    <script defer src="js/weather.js"></script>
+    <script defer src="js/getweather.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar bg-white navbar-expand-lg px-md-4 px-xl-5">
-            <a class="navbar-brand navbar logo" href="#"><img class="d-inline-block navbar-logo-img" src="img/logo.png" alt="Weather Logo"> Weather</a>
+            <a class="navbar-brand navbar logo" href="index.html"><img class="d-inline-block navbar-logo-img" src="img/logo.png" alt="Weather Logo" />
+                Weather</a>
 
-            <button class="navbar-toggler navbar-light" data-toggle="collapse" data-target="#main-menu" type="button" aria-controls="main-menu" aria-expanded="false" aria-label="Przycisk do menu"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler navbar-light" data-toggle="collapse" data-target="#main-menu" type="button" aria-controls="main-menu" aria-expanded="false" aria-label="Przycisk do menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
             <div class="collapse navbar-collapse ml-3 ml-lg-0" id="main-menu">
                 <ul class="navbar-nav mr-auto ">
                     <li class="nav-item px-lg-2 px-xl-3 py-2 py-lg-0 mt-3 mt-lg-0 main-nav-link main-nav-link-first">
-                        <a class="nav-link" href="#"><i class="fas fa-caret-right link-arrow"></i>Strona główna</a>
+                        <a class="nav-link" href="index.html"><i class="fas fa-caret-right link-arrow"></i>Strona główna</a>
                     </li>
                     <li class="nav-item px-lg-2 px-xl-3 py-2 py-lg-0 main-nav-link">
                         <a class="nav-link" href="#"><i class="fas fa-caret-right link-arrow"></i>Pogoda</a>
                     </li>
                     <li class="nav-item px-lg-2 px-xl-3 py-2 py-lg-0 main-nav-link">
-                        <a class="nav-link" href="#"><i class="fas fa-caret-right link-arrow"></i>Zanieczyszczenia powietrza</a>
+                        <a class="nav-link" href="#"><i class="fas fa-caret-right link-arrow"></i>Zanieczyszczenia
+                            powietrza</a>
                     </li>
                     <li class="nav-item px-lg-2 px-xl-3 py-2 py-lg-0 main-nav-link">
                         <a class="nav-link" href="#"><i class="fas fa-caret-right link-arrow"></i>Kontakt</a>
@@ -56,13 +61,13 @@
                 </ul>
                 <ul class="navbar-nav second-ul">
                     <li class="nav-item mx-lg-2 mx-xl-3">
-                        <a class="nav-link social-link" href="#"><i class="fab fa-facebook-square fb-icon"></i></a>
+                        <a class="nav-link social-link" href="https://www.facebook.com/wwwKrakowPL/" target="_blank"><i class="fab fa-facebook-square fb-icon"></i></a>
                     </li>
                     <li class="nav-item mx-lg-2 mx-xl-3">
-                        <a class="nav-link social-link" href="#"><i class="fab fa-instagram inst-icon"></i></a>
+                        <a class="nav-link social-link" href="https://www.instagram.com/krakow_pl/" target="_blank"><i class="fab fa-instagram inst-icon"></i></a>
                     </li>
                     <li class="nav-item mx-lg-2 mx-xl-3">
-                        <a class="nav-link social-link" href="#"><i class="fab fa-youtube nav-youtube-icon yt-icon"></i></a>
+                        <a class="nav-link social-link" href="https://www.youtube.com/user/wwwkrakowpl" target="_blank"><i class="fab fa-youtube nav-youtube-icon yt-icon"></i></a>
                     </li>
                 </ul>
             </div>
@@ -137,56 +142,22 @@
         <!--**** BLOG SECTION ****-->
         <section class="blog">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6 col-lg-3">
-                        <a href="temp_art.html">
-                            <article class="blog-article">
-                                <div class="article-img">
-                                    <img src="img/article-img.jpg">
-                                </div>
-                                <div class="article-desc">
-                                    <h5 class="article-category">Pogoda w Polsce</h5>
-                                    <h2 class="article-title">Globalne ocieplenie będzie postępować szybciej niż sądzimy.</h2>
-                                    <p class="article-description">
-                                        Działalność człowieka – spalanie paliw kopalnych, wycinanie lasów deszczowych czy hodowla zwierząt gospodarskich – ma coraz większy wpływ na klimat i temperaturę na Ziemi.</p>
-                                    <p class="article-date">2 grudnia 2019</p>
-                                </div>
-                            </article>
-                        </a>
+                <div class="row px-4">
+                    <div class="col-12 col-lg-9 publication p-5">
+                        <article>
+                            <h1>Śmierć od zanieczyszczeń powietrza? Polska w czołówce.</h1>
+                            <p class="py-3">To już nie spekulacje i domysły – najnowszy raport Narodowego Funduszu Zdrowia pokazuje, że wraz z pogorszeniem się jakości powietrza, pojawia się więcej zgonów.
+                                Naukowcy straszą smogiem od lat. Wskazują, że oddychanie skażonym powietrzem jest równie szkodliwe, co palenie papierosów, a nawet powoduje obniżenie poziomu inteligencji.</p>
+                            <h6 class="pt-4">Źródło: <a href="https://www.weforum.org/agenda/2018/11/chart-of-the-day-where-eu-air-pollution-is-deadliest" target="_blank">https://www.weforum.org/agenda/2018/11/chart-of-the-day-where-eu-air-pollution-is-deadliest</a></h6>
+                            <p class="pt-4">Wśród najważniejszych źródeł emisji zanieczyszczeń do powietrza są tzw. komunalno-bytowe, przede wszystkim gospodarstwa domowe i użytkowane w nich paliwa i inne surowce, transport - zwłaszcza w miastach, a także produkcja i dystrybucja energii.</p>
+
+                            <p>Zdaniem Artura Badydy, w Polsce zachodzą ostatnio pozytywne zmiany i rośnie świadomość zagrożenia powietrzem złej jakości. - Brakuje jednak regulacji prawnych, które skutecznie pozbawiłyby społeczeństwo możliwości spalania niskiej jakości węgla, odpadów komunalnych. Uchwały antysmogowe podejmowane przez samorządy to dobry krok w pozytywnym kierunku, ale działanie niewystarczające. Czekamy na rozporządzenie, które ureguluje kwestię jakości paliw, których możemy używać w gospodarstwach domowych - podkreślił.</p>
+
+                            <p>Prof. Andrzej Lekston ze Śląskiego Centrum Chorób Serca w Zabrzu przestrzegł, że zła jakość powietrza przyczynia się do rozwoju alergii, zaburza też płodność. Długotrwałe wdychanie pyłów prowadzi do spadku produkcji testosteronu, uszkodzenia plemników, upośledzenia odporności dziecka już w życiu płodowym. - Dzieci wdychają proporcjonalnie do wagi o 50 proc. więcej powietrza na kilogram masy ciała niż osoba dorosła. Ich układ oddechowy jest niedojrzały morfologicznie i czynnościowo, odporność słabsza, są więc bardziej narażone na skutki zanieczyszczenia powietrza. Druga zagrożona grupa to osoby starsze - powiedział.</p>
+                        </article>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <a href="air_pollution_article.html">
-                            <article class="blog-article">
-                                <div class="article-img">
-                                    <img src="img/article2-img.jpg">
-                                </div>
-                                <div class="article-desc">
-                                    <h5 class="article-category">Pogoda w Polsce</h5>
-                                    <h2 class="article-title">Śmierć od zanieczyszczeń powietrza? Polska w czołówce.</h2>
-                                    <p class="article-description">
-                                        To już nie spekulacje i domysły – najnowszy raport Narodowego Funduszu Zdrowia pokazuje, że wraz z pogorszeniem się jakości powietrza, pojawia się więcej zgonów.</p>
-                                    <p class="article-date">27 listopada 2019</p>
-                                </div>
-                            </article>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <a href="#">
-                            <article class="blog-article mt-5 mt-lg-0">
-                                <div class="article-img">
-                                    <img src="img/article3-img.jpg">
-                                </div>
-                                <div class="article-desc">
-                                    <h5 class="article-category">Pogoda w Polsce</h5>
-                                    <h2 class="article-title">Provident fuga atque sit amet, consectetur.</h2>
-                                    <p class="article-description">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta corrupti consequuntur accusantium minima itaque autem, aut eaque saepe.</p>
-                                    <p class="article-date">24 listopada 2019</p>
-                                </div>
-                            </article>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-3 px-0 px-md-3 px-xl-4">
+
+                    <div class="col-12 col-lg-3 px-0 px-md-3 px-xl-4">
                         <article class="aside air-polution mt-5 mt-md-3 mt-lg-0">
                             <i class="fas fa-smog aside-icon"></i>
                             <h2 class="aside-title">Jakość powietrza</h2>
@@ -205,7 +176,6 @@
                             </p>
                         </article>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -214,18 +184,20 @@
         <div class="container-fluid footer">
             <div class="row pt-5 px-5 mr-3">
                 <div class="col-12 col-sm-6 col-lg-3">
-                    <a class="footer-logo" href="#">
-                        <img class="footer-logo-img" src="img/footer-logo.png" alt="Weather Logo"> Weather</a></div>
-                <article class="col-12 col-sm-6 col-lg-3 px-0 pt-5 pt-sm-0 px-md-2">
+                    <a class="footer-logo" href="index.html">
+                        <img class="footer-logo-img" src="img/footer-logo.png" alt="Weather Logo" />
+                        Weather</a>
+                </div>
+                <article class="col-12 col-sm-6 col-lg-3 px-0 pt-5 pt-sm-4 px-md-2">
                     <h4 class="h5 text-uppercase">Nawigacja</h4>
                     <ul>
-                        <li><a href="#">Strona główna</a></li>
+                        <li><a href="index.html">Strona główna</a></li>
                         <li><a href="#">Pogoda</a></li>
                         <li><a href="#">Zanieczyszczenie powietrza</a></li>
                         <li><a href="#">Kontakt</a></li>
                     </ul>
                 </article>
-                <article class="col-12 col-sm-6 col-lg-3 px-0 px-md-2">
+                <article class="col-12 col-sm-6 col-lg-3 px-0 pt-4 px-md-2">
                     <h4 class="h5 text-uppercase">Autorzy</h4>
                     <ul>
                         <li>Sebastian Kudła</li>
@@ -233,7 +205,7 @@
                         <li>Sebastian Staszczyk</li>
                     </ul>
                 </article>
-                <article class="col-12 col-sm-6 col-lg-3 px-0 px-md-2">
+                <article class="col-12 col-sm-6 col-lg-3 px-0 pt-4 px-md-2">
                     <h4 class="h5 text-uppercase">Kontakt</h4>
                     <ul>
                         <li>przykładowyemail@gmail.com</li>
@@ -241,7 +213,10 @@
                     </ul>
                 </article>
                 <article class="pt-5 pb-1">
-                    <p>"Elektroniczna Wymiana Danych" Projekt &copy; Wszelkie prawa zastrzeżone.</p>
+                    <p>
+                        "Elektroniczna Wymiana Danych" Projekt &copy; Wszelkie prawa
+                        zastrzeżone.
+                    </p>
                 </article>
             </div>
         </div>
