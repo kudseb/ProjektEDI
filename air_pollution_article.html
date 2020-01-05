@@ -29,8 +29,9 @@
     <!-- Script -->
     <script defer src="js/skycons.js"></script>
     <script defer src="js/navbar.js"></script>
-    <script defer src="js/getweather.js"></script>
+    <script defer src="js/weather.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script defer src="js/pollutionchart.js"></script>
 </head>
 
 <body>
@@ -148,7 +149,10 @@
                             <h1>Śmierć od zanieczyszczeń powietrza? Polska w czołówce.</h1>
                             <p class="py-3">To już nie spekulacje i domysły – najnowszy raport Narodowego Funduszu Zdrowia pokazuje, że wraz z pogorszeniem się jakości powietrza, pojawia się więcej zgonów.
                                 Naukowcy straszą smogiem od lat. Wskazują, że oddychanie skażonym powietrzem jest równie szkodliwe, co palenie papierosów, a nawet powoduje obniżenie poziomu inteligencji.</p>
-                            <h6 class="pt-4">Źródło: <a href="https://www.weforum.org/agenda/2018/11/chart-of-the-day-where-eu-air-pollution-is-deadliest" target="_blank">https://www.weforum.org/agenda/2018/11/chart-of-the-day-where-eu-air-pollution-is-deadliest</a></h6>
+                            <canvas id="bar-chart" width="400"></canvas>
+                            <h6 class="pt-4">Źródło:
+                                <a href="https://www.weforum.org/agenda/2018/11/chart-of-the-day-where-eu-air-pollution-is-deadliest" target="_blank">https://www.weforum.org/agenda/2018/11/chart-of-the-day-where-eu-air-pollution-is-deadliest</a>
+                            </h6>
                             <p class="pt-4">Wśród najważniejszych źródeł emisji zanieczyszczeń do powietrza są tzw. komunalno-bytowe, przede wszystkim gospodarstwa domowe i użytkowane w nich paliwa i inne surowce, transport - zwłaszcza w miastach, a także produkcja i dystrybucja energii.</p>
 
                             <p>Zdaniem Artura Badydy, w Polsce zachodzą ostatnio pozytywne zmiany i rośnie świadomość zagrożenia powietrzem złej jakości. - Brakuje jednak regulacji prawnych, które skutecznie pozbawiłyby społeczeństwo możliwości spalania niskiej jakości węgla, odpadów komunalnych. Uchwały antysmogowe podejmowane przez samorządy to dobry krok w pozytywnym kierunku, ale działanie niewystarczające. Czekamy na rozporządzenie, które ureguluje kwestię jakości paliw, których możemy używać w gospodarstwach domowych - podkreślił.</p>
