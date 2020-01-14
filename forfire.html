@@ -2,54 +2,60 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Weather</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/jpg" href="img/favicon.png" />
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap&subset=latin-ext" rel="stylesheet" />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/all.min.css" />
 
     <!-- Own style -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
 
     <!-- Script -->
     <script defer src="js/skycons.js"></script>
     <script defer src="js/navbar.js"></script>
     <script defer src="js/weather.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script defer type='text/javascript' src="js/forfirechart.js"></script>
     <script defer src="js/proverbs.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar bg-white navbar-expand-lg px-md-4 px-xl-5">
-            <a class="navbar-brand navbar logo" href="#"><img class="d-inline-block navbar-logo-img" src="img/logo.png" alt="Weather Logo"> Weather</a>
+            <a class="navbar-brand navbar logo" href="index.html"><img class="d-inline-block navbar-logo-img" src="img/logo.png" alt="Weather Logo" />
+                Weather</a>
 
-            <button class="navbar-toggler navbar-light" data-toggle="collapse" data-target="#main-menu" type="button" aria-controls="main-menu" aria-expanded="false" aria-label="Przycisk do menu"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler navbar-light" data-toggle="collapse" data-target="#main-menu" type="button" aria-controls="main-menu" aria-expanded="false" aria-label="Przycisk do menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
             <div class="collapse navbar-collapse ml-3 ml-lg-0" id="main-menu">
                 <ul class="navbar-nav mr-auto ">
                     <li class="nav-item px-lg-2 px-xl-3 py-2 py-lg-0 mt-3 mt-lg-0 main-nav-link main-nav-link-first">
-                        <a class="nav-link" href="#"><i class="fas fa-caret-right link-arrow"></i>Strona główna</a>
+                        <a class="nav-link" href="index.html"><i class="fas fa-caret-right link-arrow"></i>Strona główna</a>
                     </li>
                     <li class="nav-item px-lg-2 px-xl-3 py-2 py-lg-0 main-nav-link">
                         <a class="nav-link" href="#"><i class="fas fa-caret-right link-arrow"></i>Pogoda</a>
                     </li>
                     <li class="nav-item px-lg-2 px-xl-3 py-2 py-lg-0 main-nav-link">
-                        <a class="nav-link" href="#"><i class="fas fa-caret-right link-arrow"></i>Zanieczyszczenia powietrza</a>
+                        <a class="nav-link" href="#"><i class="fas fa-caret-right link-arrow"></i>Zanieczyszczenia
+                            powietrza</a>
                     </li>
                     <li class="nav-item px-lg-2 px-xl-3 py-2 py-lg-0 main-nav-link">
                         <a class="nav-link" href="#"><i class="fas fa-caret-right link-arrow"></i>Kontakt</a>
@@ -57,13 +63,13 @@
                 </ul>
                 <ul class="navbar-nav second-ul">
                     <li class="nav-item mx-lg-2 mx-xl-3">
-                        <a class="nav-link social-link" href="#"><i class="fab fa-facebook-square fb-icon"></i></a>
+                        <a class="nav-link social-link" href="https://www.facebook.com/wwwKrakowPL/" target="_blank"><i class="fab fa-facebook-square fb-icon"></i></a>
                     </li>
                     <li class="nav-item mx-lg-2 mx-xl-3">
-                        <a class="nav-link social-link" href="#"><i class="fab fa-instagram inst-icon"></i></a>
+                        <a class="nav-link social-link" href="https://www.instagram.com/krakow_pl/" target="_blank"><i class="fab fa-instagram inst-icon"></i></a>
                     </li>
                     <li class="nav-item mx-lg-2 mx-xl-3">
-                        <a class="nav-link social-link" href="#"><i class="fab fa-youtube nav-youtube-icon yt-icon"></i></a>
+                        <a class="nav-link social-link" href="https://www.youtube.com/user/wwwkrakowpl" target="_blank"><i class="fab fa-youtube nav-youtube-icon yt-icon"></i></a>
                     </li>
                 </ul>
             </div>
@@ -138,57 +144,40 @@
         <!--**** BLOG SECTION ****-->
         <section class="blog">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6 col-lg-3">
-                        <a href="temp_art.html">
-                            <article class="blog-article">
-                                <div class="article-img">
-                                    <img src="img/article-img.jpg">
-                                </div>
-                                <div class="article-desc">
-                                    <h5 class="article-category">Pogoda w Polsce</h5>
-                                    <h2 class="article-title">Globalne ocieplenie będzie postępować szybciej niż sądzimy.</h2>
-                                    <p class="article-description">
-                                        Działalność człowieka – spalanie paliw kopalnych, wycinanie lasów deszczowych czy hodowla zwierząt gospodarskich – ma coraz większy wpływ na klimat i temperaturę na Ziemi.</p>
-                                    <p class="article-date">2 grudnia 2019</p>
-                                </div>
-                            </article>
-                        </a>
+                <div class="row px-4">
+                    <div class="col-12 col-lg-9 publication p-5">
+                        <article>
+                            <h1>Występowanie pożarów lasu w latach 1990-2009</h1>
+                            <p class="py-3">W ostatnim dwudziestoleciu w polskich lasach powstało 178634 pożary na
+                                powierzchni 172194 ha. W lasach będących pod zarządem Lasów Państwowych odnotowano
+                                87565 pożarów, w wyniku których spaleniu uległo 72572 ha. Pożary te stanowiły 49%
+                                wszystkich powstałych w tym czasie w kraju i objęły 42% łącznej powierzchni spalonej.
+                                Na rycinie 4 przedstawiono liczbę pożarów lasu i powierzchnię spaloną w Polsce
+                                w analizowanym okresie, a na rycinie 5 średnią powierzchnię pojedynczego pożaru.</p>
+                            <canvas id="chart" width="400"></canvas>
+                            <h6 class="pt-4">Źródło: dr hab. Ryszard SZCZYGIEŁ, prof. nadzw.
+                                Instytut Badawczy Leśnictwa "WIELKOOBSZAROWE POŻARY LASÓW W POLSCE"</h6>
+                                
+                            <p class="pt-4">Pożary lasów są jedną z głównych przyczyn szkód ekologicznych. Szczególnie pożary katastrofalne, których
+                                powierzchnia przekracza 500 ha powodują silne zaburzenia w środowisku naturalnym, powodując długotrwałe
+                                i szkodliwe zmiany, przyczyniając się także do powstawania efektu cieplarnianego</p>
+
+                            <p>Średnio w roku, na świecie
+                                powstaje kilkaset tysięcy pożarów lasu, w wyniku których niszczone są zasoby leśne na powierzchni 10 mln ha.
+                                Polska na tle państw europejskich odznacza się średnim ryzykiem zagrożenia pożarowego, ale cechą
+                                charakterystyczną jest dla niej duża liczba powstających pożarów lasu na stosunkowo małej powierzchni.
+                                Zdarzają się jednak lata (rok 1992), kiedy Polskę nękały pożary katastrofalne i służby ratownicze stawały przed
+                                trudnymi zadaniami opanowania żywiołu.</p>
+
+                            <p>W artykule przedstawiono charakterystykę zagrożenia lasów Polski
+                                i występowania pożarów w latach 1990-2009, z omówieniem problematyki wielkoobszarowych pożarów,
+                                przyczyn ich powstawania oraz zasad przeciwdziałania im.</p>
+
+    
+                        </article>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <a href="air_pollution_article.html">
-                            <article class="blog-article">
-                                <div class="article-img">
-                                    <img src="img/article2-img.jpg">
-                                </div>
-                                <div class="article-desc">
-                                    <h5 class="article-category">Pogoda w Polsce</h5>
-                                    <h2 class="article-title">Śmierć od zanieczyszczeń powietrza? Polska w czołówce.</h2>
-                                    <p class="article-description">
-                                        To już nie spekulacje i domysły – najnowszy raport Narodowego Funduszu Zdrowia pokazuje, że wraz z pogorszeniem się jakości powietrza, pojawia się więcej zgonów.</p>
-                                    <p class="article-date">27 listopada 2019</p>
-                                </div>
-                            </article>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <a href="forfire.html">
-                            <article class="blog-article mt-5 mt-lg-0">
-                                <div class="article-img">
-                                    <img src="img/article3-img.jpg">
-                                </div>
-                                <div class="article-desc">
-                                    <h5 class="article-category">Pogoda w Polsce</h5>
-                                    <h2 class="article-title">Występowanie pożarów lasu w latach 1990-2009.</h2>
-                                    <p class="article-description">
-                                        Pożary lasów są jedną z głównych przyczyn szkód ekologicznych.zczególnie pożary katastrofalne, których
-                                        powierzchnia przekracza 500 ha</p>
-                                    <p class="article-date">24 listopada 2019</p>
-                                </div>
-                            </article>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-3 px-0 px-md-3 px-xl-4">
+
+                    <div class="col-12 col-lg-3 px-0 px-md-3 px-xl-4">
                         <article class="aside air-polution mt-5 mt-md-3 mt-lg-0">
                             <i class="fas fa-smog aside-icon"></i>
                             <h2 class="aside-title">Jakość powietrza</h2>
@@ -205,7 +194,6 @@
                             <p class="aside-description"></p>
                         </article>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -214,18 +202,20 @@
         <div class="container-fluid footer">
             <div class="row pt-5 px-5 mr-3">
                 <div class="col-12 col-sm-6 col-lg-3">
-                    <a class="footer-logo" href="#">
-                        <img class="footer-logo-img" src="img/footer-logo.png" alt="Weather Logo"> Weather</a></div>
-                <article class="col-12 col-sm-6 col-lg-3 px-0 pt-5 pt-sm-0 px-md-2">
+                    <a class="footer-logo" href="index.html">
+                        <img class="footer-logo-img" src="img/footer-logo.png" alt="Weather Logo" />
+                        Weather</a>
+                </div>
+                <article class="col-12 col-sm-6 col-lg-3 px-0 pt-5 pt-sm-4 px-md-2">
                     <h4 class="h5 text-uppercase">Nawigacja</h4>
                     <ul>
-                        <li><a href="#">Strona główna</a></li>
+                        <li><a href="index.html">Strona główna</a></li>
                         <li><a href="#">Pogoda</a></li>
                         <li><a href="#">Zanieczyszczenie powietrza</a></li>
                         <li><a href="#">Kontakt</a></li>
                     </ul>
                 </article>
-                <article class="col-12 col-sm-6 col-lg-3 px-0 px-md-2">
+                <article class="col-12 col-sm-6 col-lg-3 px-0 pt-4 px-md-2">
                     <h4 class="h5 text-uppercase">Autorzy</h4>
                     <ul>
                         <li>Sebastian Kudła</li>
@@ -233,7 +223,7 @@
                         <li>Sebastian Staszczyk</li>
                     </ul>
                 </article>
-                <article class="col-12 col-sm-6 col-lg-3 px-0 px-md-2">
+                <article class="col-12 col-sm-6 col-lg-3 px-0 pt-4 px-md-2">
                     <h4 class="h5 text-uppercase">Kontakt</h4>
                     <ul>
                         <li>przykładowyemail@gmail.com</li>
@@ -241,7 +231,10 @@
                     </ul>
                 </article>
                 <article class="pt-5 pb-1">
-                    <p>"Elektroniczna Wymiana Danych" Projekt &copy; Wszelkie prawa zastrzeżone.</p>
+                    <p>
+                        "Elektroniczna Wymiana Danych" Projekt &copy; Wszelkie prawa
+                        zastrzeżone.
+                    </p>
                 </article>
             </div>
         </div>
